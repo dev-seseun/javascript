@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
+      integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./btn.js"></script>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-body"></div>
+      <div class="modal-footer"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  function cancel() {
+    console.log('취소');
+  }
+  function confirm() {
+    console.log('확인');
+    alert('확인이다');
+  }
+  openModal('들어갈 텍스트', [
+    {
+      text: '취소',
+      style: 'gray',
+      onclick: cancel,
+    },
+    {
+      text: '확인',
+      style: 'skyblue',
+      onclick: confirm,
+    },
+  ]);
+</script>
